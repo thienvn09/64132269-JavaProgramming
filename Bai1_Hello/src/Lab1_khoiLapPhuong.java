@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Lab4_khoiLapPhuong {
+public class Lab1_khoiLapPhuong {
 
 	public static void main(String[] args) {
 		Scanner nhap = new Scanner(System.in);

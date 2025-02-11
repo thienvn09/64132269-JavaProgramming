@@ -1,7 +1,7 @@
 package src;
 import java.util.Scanner;
 
-public class Lab3_HinhChuNhat {
+public class Lab1_HinhChuNhat {
 
 	public static void main(String[] args) {
 		Scanner nhap = new Scanner(System.in);
