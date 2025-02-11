@@ -9,8 +9,11 @@ public class Bai2_nhapxuat {
 		Ten = scanner.nextLine();
 		System.out.print("moi nhap diem cua ban : ");
 		Diem = scanner.nextInt();
-		System.out.printf("Diem cua ban la : %d",Diem);
-		System.out.printf("Ten ban vua nhap la %s",Ten);
+		scanner.nextLine();
+		
+		System.out.printf("Diem cua ban la : %d \n ",Diem);
+		System.out.printf("Ten ban vua nhap la : %s  ",Ten);
+		scanner.close();
 	}
 
 }
