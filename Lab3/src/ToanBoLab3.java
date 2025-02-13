@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class ToanBoLab3 {
 
@@ -33,21 +34,18 @@ public class ToanBoLab3 {
 			System.out.print(n+"x"+i+"="+n*i);
 		}
 	}
-	public void SapXep() 
+	public void Nhap(int a[],int n) 
 	{
 		Scanner nhap = new Scanner(System.in);
 		System.out.print("Moi nhap so luong phan tu cua mang ");
-		int n = nhap.nextInt();
-		int[] a = new int[n];
+		 n = nhap.nextInt();
+		nhap.close();
+		int[] a[] = new int[n];
 		for(int i=0;i<n;i++)
 		{
 			System.out.printf("moi nhap phan tu thu %d : ",i+1);
 			a[i] = nhap.nextInt();
 		}
-		System.out.print(false);
-		for(int i=0;i<n;i++)
-		{
-			System.out.printf("a[%d]=%d",i+1,a[i]);
-		}
+		
 	}
 }
