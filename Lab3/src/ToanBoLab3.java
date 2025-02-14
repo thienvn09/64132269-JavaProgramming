@@ -45,7 +45,25 @@ public class ToanBoLab3 {
 			System.out.printf("mời nhâp phần tử thứ %d : ",i+1);
 			a[i]=nhap.nextInt();
 		}
-		return a;
+		return a; // trả về kiểu mảng
 		
 	}
+	public static void Xuat(int a[])
+	{
+		System.out.print("các phần tử của mảng là : ");
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+	public static void SapXep(int a[])
+	{
+		Arrays.sort(a);
+		System.out.print("mảng sau khi sắp xếp là : ");
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+	
 }
