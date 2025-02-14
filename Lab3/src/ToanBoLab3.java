@@ -38,9 +38,7 @@ public class ToanBoLab3 {
 	{
 		Scanner nhap = new Scanner(System.in);
 		System.out.print("Moi nhap so luong phan tu cua mang ");
-		 int n = nhap.nextInt();
-		nhap.close();
-		int a[] = new int[n];
+		 n = nhap.nextInt();
 		for(int i=0;i<n;i++)
 		{
 			System.out.printf("moi nhap phan tu thu %d : ",i+1);
