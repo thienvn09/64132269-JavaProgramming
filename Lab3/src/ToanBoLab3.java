@@ -34,15 +34,18 @@ public class ToanBoLab3 {
 			System.out.print(n+"x"+i+"="+n*i);
 		}
 	}
-	public void Nhap(int a[],int n) 
+	public static int[] Nhap ()
 	{
 		Scanner nhap = new Scanner(System.in);
-		System.out.print("Moi nhap so luong phan tu cua mang ");
-		 n = nhap.nextInt();
+		System.out.print("Mời bạn nhập số phần tử của mảng : ");
+		int n = nhap.nextInt();
+		int a[] = new int[n];
 		for(int i=0;i<n;i++)
 		{
-			System.out.printf("moi nhap phan tu thu %d : ",i+1);
-			a[i] = nhap.nextInt();
+			System.out.printf("mời nhâp phần tử thứ %d : ",i+1);
+			a[i]=nhap.nextInt();
 		}
+		return a;
+		
 	}
 }
