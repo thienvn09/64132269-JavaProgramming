@@ -106,6 +106,6 @@ public class ToanBoLab3 {
 			System.out.printf("mời nhâp tên học sinh thứ %d : ",i+1);
 			a[i]=nhap.nextLine();
 		}
-		return a;
+		return a; // hjehe
 	}
 }
