@@ -65,5 +65,23 @@ public class ToanBoLab3 {
 			System.out.print(a[i]+" ");
 		}
 	}
-	
+	public static void SNN(int a[])
+	{
+		int min = a[0];
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]<min) min = a[i];
+		}
+		System.out.print("số nhỏ nhất trong mảng là : "+min);
+	}
+	public static int Tb(int a[])
+	{
+		int sum=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]%3==0)
+			sum+=a[i];
+		}
+		return sum/a.length;
+	}
 }
