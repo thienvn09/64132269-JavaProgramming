@@ -77,11 +77,27 @@ public class ToanBoLab3 {
 	public static int Tb(int a[])
 	{
 		int sum=0;
+		int cout=0;
 		for(int i=0;i<a.length;i++)
 		{
 			if(a[i]%3==0)
 			sum+=a[i];
+			cout++;
 		}
-		return sum/a.length;
+		if(cout == 0) return 0; // tránh trường hợp chia cho 0
+		return sum/cout; 
+	}
+	public static string[] Hs()
+	{
+		Scanner nhap = new Scanner(System.in);
+		System.out.print("Mời bạn nhập số học sinh : ");
+		int n = nhap.nextInt();
+		String a[] = new String[n];
+		for(int i=0;i<n;i++)
+		{
+			System.out.printf("mời nhâp tên học sinh thứ %d : ",i+1);
+			a[i]=nhap.nextLine();
+		}
+		return a;
 	}
 }
