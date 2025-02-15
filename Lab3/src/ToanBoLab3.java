@@ -5,13 +5,14 @@ public class ToanBoLab3 {
 	public static void main(String[] args) {
 	Scanner nhap = new Scanner(System.in);
 	int hehe;
-	String[][] hs = Hs();
 	System.out.print("xin chào\n");
+	System.out.print("+---------------------------------------------------+\n");
 	System.out.print("mời bạn chọn chức năng \n");
 	System.out.print("1. kiểm tra số nguyên tố \n");
 	System.out.print("2.viết bản cửu chương \n ");
-	System.out.print("3. ");
-	System.out.print("4. ");
+	System.out.print("3. Mảng số nguyên và sắp xếp \n");
+	System.out.print("4. Họ tên và năng lực của học sinh\n");
+	System.out.print("+---------------------------------------------------+\n");
 	do {
 		System.out.print("mời chọn chức năng : ");
 		hehe = nhap.nextInt();
@@ -25,7 +26,13 @@ public class ToanBoLab3 {
 		if(tam == true) System.out.printf("số %d là số nguyên tố ",n);
 		else System.out.printf("Số %d không phải là số nguyên tố ", n);
 		break;
+	case 4:
+		String[][] hs = Hs();
+		System.out.print("\nDanh sách học sinh : ");
+		
+		break;
 	}
+	
 	
 }
 		
@@ -112,13 +119,23 @@ public class ToanBoLab3 {
 		Scanner nhap = new Scanner(System.in);
 		System.out.print("moi nhap so hoc sinh : \n");
 		int dong = nhap.nextInt();
-		String a[][] = new String[2][dong];
+		String a[][] = new String[3][dong];
 			for(int i=0;i<dong;i++)
 			{
 				System.out.printf("moi nhap tên học sinh thứ %d : ",i+1);
 				a[i][1]= nhap.next();
 				System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
 				a[i][2]=nhap.next();
+				int diem = Integer.parseInt(a[i][1]);
+				if(diem >9 )
+				{
+					a[i][3]="Xuất sắc";
+				}
+				else if(diem >= 7.5 && diem <9)
+				{
+					a[i][3] = "Giỏi";
+				}
+				else if(diem )
 			}
 			return a;
 			
