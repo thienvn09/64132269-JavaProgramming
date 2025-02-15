@@ -119,14 +119,14 @@ public class ToanBoLab3 {
 		Scanner nhap = new Scanner(System.in);
 		System.out.print("moi nhap so hoc sinh : \n");
 		int dong = nhap.nextInt();
-		String a[][] = new String[3][dong];
+		String a[][] = new String[dong][3];
 			for(int i=0;i<dong;i++)
 			{
 				System.out.printf("moi nhap tên học sinh thứ %d : ",i+1);
 				a[i][1]= nhap.next();
 				System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
 				a[i][2]=nhap.next();
-				int diem = Integer.parseInt(a[i][1]);
+				int diem = Integer.parseInt(a[i][2]);
 				if(diem >9 )
 				{
 					a[i][3]="Xuất sắc";
@@ -135,8 +135,20 @@ public class ToanBoLab3 {
 				{
 					a[i][3] = "Giỏi";
 				}
-				else if(diem )
+				else if(diem >= 6.5 && diem <7.5)
+				{
+					a[i][3]="khá";
+				}
+				else if(diem >= 5 && diem <6.5)
+				{
+					a[i][3]="trung bình";
+				}
+				else
+				{
+					a[i][3]="yếu";
+				}
 			}
+			nhap.close();
 			return a;
 			
 	}
