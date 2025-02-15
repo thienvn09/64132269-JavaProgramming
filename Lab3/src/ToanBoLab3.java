@@ -5,9 +5,9 @@ public class ToanBoLab3 {
 	public static void main(String[] args) {
 	Scanner nhap = new Scanner(System.in);
 	int hehe;
-	System.out.print("xin chào\n");
 	System.out.print("+---------------------------------------------------+\n");
-	System.out.print("mời bạn chọn chức năng \n");
+	System.out.print("xin chào\n");
+	System.out.print("Mời bạn chọn chức năng \n");
 	System.out.print("1. kiểm tra số nguyên tố \n");
 	System.out.print("2. viết bản cửu chương \n ");
 	System.out.print("3. Mảng số nguyên và sắp xếp \n");
@@ -20,7 +20,7 @@ public class ToanBoLab3 {
 	switch(hehe) 
 	{
 	case 1:
-		System.out.print("mời nhập số cần kiểm tra");
+		System.out.print("mời nhập số cần kiểm tra : ");
 		int n=nhap.nextInt();
 		boolean tam=SNT(n);
 		if(tam == true) System.out.printf("số %d là số nguyên tố ",n);
@@ -30,6 +30,27 @@ public class ToanBoLab3 {
 		System.out.print("mời nhập bảng cửu chương cần in : \n");
 		int ok = nhap.nextInt();
 		Bangcuuchuong(ok);
+		break;
+	case 3:
+		int a[];
+		System.out.print("Mời nhập số phần tử có trong mảng : ");
+		int n1=nhap.nextInt();
+		a = new int[n1];
+		for(int i=0;i<n1;i++)
+		{
+			System.out.printf("mời nhập phần tử thứ %d : ",i+1);
+			a[i]=nhap.nextInt();
+		}
+		Arrays.sort(a);
+		System.out.print("mảng sau khi sắp xếp là : ");
+		for(int i=0;i<n1;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		System.out.print("\n");
+		SNN(a);
+		System.out.print("\n");
+		System.out.print("trung bình cộng của các số chia hết cho 3 là : "+Tb(a));
 		break;
 	case 4:
 		String[][] danhSach = Hs();
@@ -62,36 +83,6 @@ public class ToanBoLab3 {
 		for(int i=1;i<=10;i++)
 		{
 			System.out.print(n+"x"+i+"="+n*i);
-		}
-	}
-	public static double[] Nhap ()
-	{
-		Scanner nhap = new Scanner(System.in);
-		System.out.print("mời nhập số lượng phần từ của mảng : ");
-		int n = nhap.nextInt();
-		int a[]=new int[n];
-		for(int i=0;i<n;i++)
-		{
-			do {
-				System.out.printf("mời nhập phần tử thứ %d",i+1);
-			}while();
-		}
-	}
-	public static void Xuat(int a[])
-	{
-		System.out.print("các phần tử của mảng là : ");
-		for(int i=0;i<a.length;i++)
-		{
-			System.out.print(a[i]+" ");
-		}
-	}
-	public static void SapXep(int a[])
-	{
-		Arrays.sort(a);
-		System.out.print("mảng sau khi sắp xếp là : ");
-		for(int i=0;i<a.length;i++)
-		{
-			System.out.print(a[i]+" ");
 		}
 	}
 	public static void SNN(int a[])
