@@ -64,19 +64,18 @@ public class ToanBoLab3 {
 			System.out.print(n+"x"+i+"="+n*i);
 		}
 	}
-	public static int[] Nhap ()
+	public static double[] Nhap ()
 	{
 		Scanner nhap = new Scanner(System.in);
-		System.out.print("Mời bạn nhập số phần tử của mảng : ");
+		System.out.print("mời nhập số lượng phần từ của mảng : ");
 		int n = nhap.nextInt();
-		int a[] = new int[n];
+		int a[]=new int[n];
 		for(int i=0;i<n;i++)
 		{
-			System.out.printf("mời nhâp phần tử thứ %d : ",i+1);
-			a[i]=nhap.nextInt();
+			do {
+				System.out.printf("mời nhập phần tử thứ %d",i+1);
+			}while();
 		}
-		return a; // trả về kiểu mảng
-		
 	}
 	public static void Xuat(int a[])
 	{
@@ -132,32 +131,42 @@ public class ToanBoLab3 {
 				do {
 					System.out.printf("moi nhap tên học sinh thứ %d : ",i+1);
 					ten= nhap.next(); // tên
+					
 					if(!ten.matches("[a-zA-ZÀ-Ỹà-ỹ ]+")) {
 						System.out.println(" Lỗi: Tên không được chứa số hoặc ký tự đặc biệt. Vui lòng nhập lại!");
 					}
-				}while (!ten.matches("[a-zA-ZÀ-Ỹà-ỹ ]+")); // Lặp lại nếu tên không hợp lệ
+					
+				}while (!ten.matches("[a-zA-ZÀ-Ỹà-ỹ ]+")); /* Lặp lại nếu tên không hợp lệ */
 				a[i][0]=ten;
+				
 				do {
 					System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
-					while()
-					diem1=nhap.nextInt();
-				}while(!diem1.matches("[1-9]+"));
-				
+					while (!nhap.hasNextDouble()) {  // Kiểm tra nếu không phải số
+	                    System.out.println("Lỗi: Điểm phải là số từ 0 đến 10. Vui lòng nhập lại!");
+	                    nhap.next();
+	                }
+					diem1 = nhap.nextDouble();
+					
+					if(diem1 <= 0 || diem1 >=10) {
+						System.out.println("điểm phải từ 0 tới 10");
+					}
+				}while(diem1 <= 0 || diem1 >=10 );
+				a[i][1]=String.valueOf(diem1);
 				nhap.nextLine();
-				int diem = Integer.parseInt(a[i][1]);
-				if(diem >9 )
+				
+				if(diem1 >9 )
 				{
 					a[i][2]="Xuất sắc";
 				}
-				else if(diem >= 7.5 && diem <9)
+				else if(diem1 >= 7.5 && diem1 <9)
 				{
 					a[i][2] = "Giỏi";
 				}
-				else if(diem >= 6.5 && diem <7.5)
+				else if(diem1 >= 6.5 && diem1 <7.5)
 				{
 					a[i][2]="khá";
 				}
-				else if(diem >= 5 && diem <6.5)
+				else if(diem1 >= 5 && diem1 <6.5)
 				{
 					a[i][2]="trung bình";
 				}
