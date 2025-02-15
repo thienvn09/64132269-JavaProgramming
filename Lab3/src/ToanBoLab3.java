@@ -9,7 +9,7 @@ public class ToanBoLab3 {
 	System.out.print("+---------------------------------------------------+\n");
 	System.out.print("mời bạn chọn chức năng \n");
 	System.out.print("1. kiểm tra số nguyên tố \n");
-	System.out.print("2.viết bản cửu chương \n ");
+	System.out.print("2. viết bản cửu chương \n ");
 	System.out.print("3. Mảng số nguyên và sắp xếp \n");
 	System.out.print("4. Họ tên và năng lực của học sinh\n");
 	System.out.print("+---------------------------------------------------+\n");
@@ -26,13 +26,19 @@ public class ToanBoLab3 {
 		if(tam == true) System.out.printf("số %d là số nguyên tố ",n);
 		else System.out.printf("Số %d không phải là số nguyên tố ", n);
 		break;
+	case 2:
+		System.out.print("mời nhập bảng cửu chương cần in : \n");
+		int ok = nhap.nextInt();
+		Bangcuuchuong(ok);
+		break;
 	case 4:
-		String[][] hs = Hs();
-		System.out.print("\nDanh sách học sinh : ");
-		
+		String[][] danhSach = Hs();
+		System.out.print("\n Danh sách học sinh : \n");
+		 for (String[] hs : danhSach) {
+	            System.out.printf("Tên: %s - Điểm: %s - Xếp loại: %s\n", hs[0], hs[1], hs[2]);
+	        }
 		break;
 	}
-	
 	
 }
 		
@@ -51,10 +57,8 @@ public class ToanBoLab3 {
 		}
 		return check;
 	}
-	public void bangcuuchuong(int n)
+	public static void Bangcuuchuong(int n)
 	{
-		Scanner nhap = new Scanner(System.in);
-		System.out.print("mời nhập số cần in bảng cửu chương");
 		for(int i=1;i<=10;i++)
 		{
 			System.out.print(n+"x"+i+"="+n*i);
@@ -114,38 +118,52 @@ public class ToanBoLab3 {
 		return sum/cout; 
 	}
 	// ten diem 
-	public static String[][] Hs()
+	public static String[][] Hs() 
 	{
+		//a[tên][diem][nangluc] 
 		Scanner nhap = new Scanner(System.in);
-		System.out.print("moi nhap so hoc sinh : \n");
+		System.out.print("moi nhap so hoc sinh : ");
 		int dong = nhap.nextInt();
 		String a[][] = new String[dong][3];
 			for(int i=0;i<dong;i++)
 			{
-				System.out.printf("moi nhap tên học sinh thứ %d : ",i+1);
-				a[i][1]= nhap.next();
-				System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
-				a[i][2]=nhap.next();
-				int diem = Integer.parseInt(a[i][2]);
+				String ten;
+				double diem1;
+				do {
+					System.out.printf("moi nhap tên học sinh thứ %d : ",i+1);
+					ten= nhap.next(); // tên
+					if(!ten.matches("[a-zA-ZÀ-Ỹà-ỹ ]+")) {
+						System.out.println(" Lỗi: Tên không được chứa số hoặc ký tự đặc biệt. Vui lòng nhập lại!");
+					}
+				}while (!ten.matches("[a-zA-ZÀ-Ỹà-ỹ ]+")); // Lặp lại nếu tên không hợp lệ
+				a[i][0]=ten;
+				do {
+					System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
+					while()
+					diem1=nhap.nextInt();
+				}while(!diem1.matches("[1-9]+"));
+				
+				nhap.nextLine();
+				int diem = Integer.parseInt(a[i][1]);
 				if(diem >9 )
 				{
-					a[i][3]="Xuất sắc";
+					a[i][2]="Xuất sắc";
 				}
 				else if(diem >= 7.5 && diem <9)
 				{
-					a[i][3] = "Giỏi";
+					a[i][2] = "Giỏi";
 				}
 				else if(diem >= 6.5 && diem <7.5)
 				{
-					a[i][3]="khá";
+					a[i][2]="khá";
 				}
 				else if(diem >= 5 && diem <6.5)
 				{
-					a[i][3]="trung bình";
+					a[i][2]="trung bình";
 				}
 				else
 				{
-					a[i][3]="yếu";
+					a[i][2]="yếu";
 				}
 			}
 			nhap.close();
