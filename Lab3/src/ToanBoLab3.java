@@ -87,10 +87,22 @@ public class ToanBoLab3 {
 		if(cout == 0) return 0; // tránh trường hợp chia cho 0
 		return sum/cout; 
 	}
-	public static string[][] Hs()
+	// ten diem 
+	public static String[][] Hs()
 	{
-		Scanner nhap = new scanner(System.in);
-		System.out.print("moi nhap so ");
+		Scanner nhap = new Scanner(System.in);
+		System.out.print("moi nhap so hoc sinh : \n");
+		int dong = nhap.nextInt();
+		String a[][] = new String[2][dong];
+		for(int i = 0 ; i < 2;i++ )
+		{
+			for(int j=0;j<dong;j++)
+			{
+				System.out.print("moi nhap tên học sinh thứ i [] : ");
+				a[i][j]= nhap.next();
+			}
+			
+		}
 	}
 	
 }
