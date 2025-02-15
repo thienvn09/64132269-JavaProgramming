@@ -4,14 +4,30 @@ public class ToanBoLab3 {
 
 	public static void main(String[] args) {
 	Scanner nhap = new Scanner(System.in);
-	System.out.print("xin chào");
+	int hehe;
+	String[][] hs = Hs();
+	System.out.print("xin chào\n");
 	System.out.print("mời bạn chọn chức năng \n");
 	System.out.print("1. kiểm tra số nguyên tố \n");
 	System.out.print("2.viết bản cửu chương \n ");
-	}
-	public boolean SNT(int n)
+	do {
+		System.out.print("mời chọn chức năng : ");
+		hehe = nhap.nextInt();
+	}while(hehe <1 || hehe >4);
+	switch(hehe) 
 	{
+	case 1:
 		System.out.print("mời nhập số cần kiểm tra");
+		int n=nhap.nextInt();
+		boolean tam=SNT(n);
+		
+		break;
+	}
+	
+}
+		
+	public static boolean SNT(int n)
+	{
 		boolean check = true;
 		if(n<2) return false;
 		int i=2;
@@ -101,6 +117,7 @@ public class ToanBoLab3 {
 				System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
 				a[i][2]=nhap.next();
 			}
+			return a;
 			
 	}
 	
