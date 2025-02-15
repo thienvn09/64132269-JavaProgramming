@@ -94,15 +94,14 @@ public class ToanBoLab3 {
 		System.out.print("moi nhap so hoc sinh : \n");
 		int dong = nhap.nextInt();
 		String a[][] = new String[2][dong];
-		for(int i = 0 ; i < 2;i++ )
-		{
-			for(int j=0;j<dong;j++)
+			for(int i=0;i<dong;i++)
 			{
-				System.out.print("moi nhap tên học sinh thứ i [] : ");
-				a[i][j]= nhap.next();
+				System.out.printf("moi nhap tên học sinh thứ %d : ",i+1);
+				a[i][1]= nhap.next();
+				System.out.printf("mời nhập điểm của học sinh thứ %d : ",i+1);
+				a[i][2]=nhap.next();
 			}
 			
-		}
 	}
 	
 }
