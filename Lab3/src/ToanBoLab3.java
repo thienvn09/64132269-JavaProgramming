@@ -89,23 +89,8 @@ public class ToanBoLab3 {
 	}
 	public static string[][] Hs()
 	{
-		Scanner nhap = new Scanner(System.in);
-		System.out.print("Mời bạn nhập số học sinh : ");
-		int n = nhap.nextInt();
-		String a[][] = new String[n];
-		system.out.print("mời nhập điểm  học sinh : ");
-		int m = nhap.nextInt();
-		int b[][] = new int[n][m];
-		for(int i=0;i<n;i++)
-		{
-			for(int j=0;j<m;j++)
-			{
-				System.out.printf("mời nhập điểm học sinh thứ %d : ",i+1);
-				b[i][j]=nhap.nextInt();
-			}
-			System.out.printf("mời nhâp tên học sinh thứ %d : ",i+1);
-			a[i]=nhap.nextLine();
-		}
-		return a; // hjehe
+		Scanner nhap = new scanner(System.in);
+		System.out.print("moi nhap so ");
 	}
+	
 }
