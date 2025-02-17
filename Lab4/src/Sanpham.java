@@ -35,7 +35,19 @@ public class Sanpham {
 	}
 	public double getDongia()
 	{
-		
+		return dongia;
+	}
+	public double setDongia()
+	{
+		return this.dongia;
+	}
+	public double getgiamgia()
+	{
+		return giamgia;
+	}
+	public double setgiamgia()
+	{
+		return this.giamgia;
 	}
 	public void Nhap()
 	{
