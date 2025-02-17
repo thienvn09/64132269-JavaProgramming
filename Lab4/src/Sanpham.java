@@ -9,7 +9,10 @@ public class Sanpham {
 		this.dongia=dongia;
 		this.giamgia=giamgia;
 	}
-	public double getThueNhapKhau()
+public Sanpham( String Tensp, double dongia , double giamia){
+ this.Sanpham("thien", 10000,10);
+}
+	private double getThueNhapKhau()
 	{
 		return this.dongia*0.1;
 	}
