@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Sanpham {
-	String Tensp;
-	double dongia;
-	double giamgia;
+	private String Tensp;
+	private double dongia;
+	private double giamgia;
 	// 3 tham số 
 	public Sanpham(String Tensp,double dongia,double giamgia)
 	{
@@ -18,6 +18,24 @@ public class Sanpham {
 	public double getThueNhapKhau()
 	{
 		return this.dongia*0.1;
+	}
+	// phuong thuc get seter
+	
+	// Getter: Dùng để lấy giá trị của một thuộc tính.
+	//Ví dụ: public String getTenSp() { return tenSp; } giúp lấy giá trị của tenSp.
+	public String getTensp()
+	{
+		return Tensp;
+	}
+	// Setter: Dùng để gán giá trị mới cho một thuộc tính.
+	// Ví dụ: public void setTenSp(String tenSp) { this.tenSp = tenSp; } giúp thay đổi giá trị của tenSp.
+	public String setTenSp()
+	{
+		return this.Tensp;
+	}
+	public double getDongia()
+	{
+		
 	}
 	public void Nhap()
 	{
@@ -38,3 +56,4 @@ public class Sanpham {
 		
 	}
 }
+
