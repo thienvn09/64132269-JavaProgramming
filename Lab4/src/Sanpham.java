@@ -3,17 +3,17 @@ public class Sanpham {
 	String Tensp;
 	double dongia;
 	double giamgia;
+	// 3 tham số 
 	public Sanpham(String Tensp,double dongia,double giamgia)
 	{
 		this.Tensp=Tensp;
 		this.dongia=dongia;
 		this.giamgia=giamgia;
 	}
-	public Sanpham()
+	// 2 tham số
+	public Sanpham(String Tensp,double dongia)
 	{
-		this.Tensp="";
-		this.dongia=0;
-		this.giamgia=0;
+		this("thiện",1000,0);
 	}
 	public double getThueNhapKhau()
 	{
