@@ -3,6 +3,7 @@ public class Sanpham {
 	private String Tensp;
 	private double dongia;
 	private double giamgia;
+	// class là
 	// 3 tham số 
 	public Sanpham(String Tensp,double dongia,double giamgia)
 	{
