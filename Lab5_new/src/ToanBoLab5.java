@@ -62,10 +62,10 @@ public class ToanBoLab5 {
     {
         int i=0;
         Scanner nhap = new Scanner(System.in);
-        System.out.print("mời nhập chuỗi (nhập exit để thoát nhập ): ");
+        System.out.print("Mời nhập chuỗi (nhập exit để thoát nhập ) \n");
         while(true)
         {
-            System.out.printf("Nhập Chuỗi thứ %d : \n",i);
+            System.out.printf("Nhập Chuỗi thứ %d : ",i+1);
             String input = nhap.nextLine();
             if(input.equalsIgnoreCase(input))
             {
