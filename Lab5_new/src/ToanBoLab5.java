@@ -99,5 +99,8 @@ public class ToanBoLab5 {
             i++;
         }
     }
-
+    public static void Giamdan(ArrayList<String> a)
+    {
+        
+    }
 }
