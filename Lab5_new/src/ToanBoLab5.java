@@ -5,23 +5,38 @@ public class ToanBoLab5 {
         int so,n;
         Scanner nhap = new Scanner(System.in);
         ArrayList<Double> a = new ArrayList<Double>();
-        System.out.print("---------------------------");
-        System.out.print("1. Nhập mảng số thực \n");
+        System.out.println("Chương trình của lê hoàng thiện ");
+        System.out.print("---------------------------\n");
+        System.out.print("1. Nhập và xuất mảng số thực \n");
         System.out.print("2. Mảng chuỗi \n");
         System.out.print("3. Ứng dụng quản lý sản phẩm \n");
-        System.out.print("---------------------------");
-        System.out.print("Mời bạn chọn chức năng : \n");
+        System.out.print("---------------------------\n");
+        System.out.print("Mời bạn chọn chức năng : ");
         so = nhap.nextInt();
-        
-        switch so:
+        do{
+            if(so<1 || so>3)
+            {
+                System.out.print("Nhập sai mời nhập lại : ");
+                so = nhap.nextInt();
+            }
+        }while(so<1 || so>3);
+        switch (so){
             case 1:
+            System.out.print("mời nhập số lượng phần tử trong mảng : ");
+            n= nhap.nextInt();
+            Nhap(a,n);
+            System.out.print("Xuất ra màng hình : \n");
+            Xuat(a,n);
+            break;
+            case 2:
+
+        }
+
+           
+
                 
 
-        System.out.print("mời nhập số lượng phần tử trong mảng : ");
-        n= nhap.nextInt();
-        Nhap(a,n);
-        System.out.print("Xuất ra màng hình : \n");
-        Xuat(a,n);
+       
     }
     public static void Nhap(ArrayList<Double> a,int n)
     {
