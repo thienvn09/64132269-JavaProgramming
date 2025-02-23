@@ -32,12 +32,26 @@ public class ToanBoLab5 {
             Xuat(a,n);
             break;
             case 2:
+            int check;
             ArrayList<String> b = new ArrayList<String>();
             NhapChuoi(b);
             System.out.print("Xuất ra màng hình : \n");
             XuatChuoi(b);
             System.out.print("Xuất ngẫu nhiên : \n");
             XuatNgauNhien(b);
+            System.out.print("Sắp xếp tăng dần hoặc giảm dần : \n");
+            System.out.print("1. Tăng dần \n");
+            System.out.print("2. Giảm dần \n");
+            System.out.print("Mời bạn chọn chức năng : ");
+            check = nhap.nextInt();
+            if(check == 1)
+            {
+                Giamdan(b,false);
+            }
+            else
+            {
+                Giamdan(b,true);
+            }
             break;
         }
 
@@ -101,11 +115,34 @@ public class ToanBoLab5 {
             i++;
         }
     }
-    public static void Giamdan(ArrayList<String> a)
+    // Sai: Collection.sort(a, Collections.reverseOrder()); 
+    // Đúng: Collections.sort(a, Collections.reverseOrder()); 
+    public static void Giamdan(ArrayList<String> a,boolean check)
+    { 
+        if(check = true)
+        {
+            Collections.sort(a,Collections.reverseOrder());
+        }
+        else
+        {
+            Collections.sort(a); // tang dan
+        }
+        XuatChuoi(a);
+    }
+    public static void Xoa(ArrayList<String> a)
     {
+        Scanner nhap = new Scanner(System.in);
+        String xoa;
+        System.out.print("Nhập chuỗi cần xóa : ");
+        xoa = nhap.nextLine();
         for(int i=0;i<a.size();i++)
         {
-            Collection.sort(a.get(i),Collections.reverseOrder());
+            if(a.get(i).equals(xoa))
+            {
+                a.remove(i);
+            }
         }
+        XuatChuoi(a);
+        nhap.close();
     }
 }
