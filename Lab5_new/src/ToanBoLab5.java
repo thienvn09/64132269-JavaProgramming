@@ -32,6 +32,10 @@ public class ToanBoLab5 {
             case 2:
             ArrayList<String> b = new ArrayList<String>();
             NhapChuoi(b);
+            System.out.print("Xuất ra màng hình : \n");
+            XuatChuoi(b);
+            System.out.print("Xuất ngẫu nhiên : \n");
+            XuatNgauNhien(b);
             break;
         }
 
@@ -39,7 +43,7 @@ public class ToanBoLab5 {
 
                 
 
-       
+       nhap.close();
     }
     public static void Nhap(ArrayList<Double> a,int n)
     {
@@ -50,6 +54,7 @@ public class ToanBoLab5 {
             System.out.print("Nhap phan tu thu "+(i+1)+": ");
             a.add(nhap.nextDouble());
         }
+        nhap.close();
     }
     public static void Xuat(ArrayList<Double> a,int n)
     {
@@ -67,27 +72,31 @@ public class ToanBoLab5 {
         {
             System.out.printf("Nhập Chuỗi thứ %d : ",i+1);
             String input = nhap.nextLine();
-            if(input.equalsIgnoreCase(input))
+            if(input.equalsIgnoreCase("exit"))
             {
                 break;
             }
             a.add(input);
             i++;
         }
+        nhap.close();
     }
-    public static void XuatChuoi(ArrayList<String> a,int n)
+    public static void XuatChuoi(ArrayList<String> a)
     {
-        for(int i=0;i<n;i++)
+        for(int i=0;i<a.size();i++)
         {
             System.out.printf("a[%d]=%s \n",i+1,a.get(i));
         }
     }
-    public static void XuatNgauNhien(ArrayList<String> a,int n)
+    public static void XuatNgauNhien(ArrayList<String> a)
     {
         Random  rd = new Random();
-        for(int i=0;i<n;i++)
+        int i=1;
+        for(String str : a)
         {
-            System.out.printf("a[%d]=%s \n",i+1,a.get(rd.nextInt(n)));
+            str = a.get(rd.nextInt(a.size()));
+            System.out.printf("a[%d] = %s \n",i,str);
+            i++;
         }
     }
 
