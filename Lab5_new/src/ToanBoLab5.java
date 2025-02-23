@@ -1,11 +1,11 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Random;
 public class ToanBoLab5 {
     public static void main(String[] args) throws Exception {
         int so,n;
+        Boolean check;
         Scanner nhap = new Scanner(System.in);
         ArrayList<Double> a = new ArrayList<Double>();
         System.out.println("Chương trình của lê hoàng thiện ");
@@ -32,7 +32,6 @@ public class ToanBoLab5 {
             Xuat(a,n);
             break;
             case 2:
-            int check;
             ArrayList<String> b = new ArrayList<String>();
             NhapChuoi(b);
             System.out.print("Xuất ra màng hình : \n");
@@ -43,8 +42,8 @@ public class ToanBoLab5 {
             System.out.print("1. Tăng dần \n");
             System.out.print("2. Giảm dần \n");
             System.out.print("Mời bạn chọn chức năng : ");
-            check = nhap.nextInt();
-            if(check == 1)
+            check = nhap.nextBoolean();
+            if(check == false)
             {
                 Giamdan(b,false);
             }
@@ -54,11 +53,6 @@ public class ToanBoLab5 {
             }
             break;
         }
-
-           
-
-                
-
        nhap.close();
     }
     // bai 1
