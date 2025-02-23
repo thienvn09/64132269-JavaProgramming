@@ -5,7 +5,7 @@ import java.util.Random;
 public class ToanBoLab5 {
     public static void main(String[] args) throws Exception {
         int so,n;
-        Boolean check;
+        int check;
         Scanner nhap = new Scanner(System.in);
         ArrayList<Double> a = new ArrayList<Double>();
         System.out.println("Chương trình của lê hoàng thiện ");
@@ -42,8 +42,16 @@ public class ToanBoLab5 {
             System.out.print("1. Tăng dần \n");
             System.out.print("2. Giảm dần \n");
             System.out.print("Mời bạn chọn chức năng : ");
-            check = nhap.nextBoolean();
-            if(check == false)
+            check = nhap.nextInt();
+            nhap.nextLine();
+            do{
+                if(check !=1 && check !=0) //Kiểm tra nhập sai
+                {
+                    System.out.print("Nhập sai mời nhập lại : ");
+                    check = nhap.nextInt();
+                }
+            }while(check !=1 && check !=0); // chỉ nhận 1 hoặc 0
+            if(check == 1)
             {
                 Giamdan(b,false);
             }
@@ -65,7 +73,7 @@ public class ToanBoLab5 {
             System.out.print("Nhap phan tu thu "+(i+1)+": ");
             a.add(nhap.nextDouble());
         }
-        nhap.close();
+       
     }
     public static void Xuat(ArrayList<Double> a,int n)
     {
@@ -91,7 +99,7 @@ public class ToanBoLab5 {
             a.add(input);
             i++;
         }
-        nhap.close();
+        
     }
     public static void XuatChuoi(ArrayList<String> a)
     {
@@ -139,7 +147,7 @@ public class ToanBoLab5 {
             }
         }
         XuatChuoi(a);
-        nhap.close();
+        
     }
     // bai 3
 }
