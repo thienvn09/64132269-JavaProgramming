@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Random;
 public class ToanBoLab5 {
     public static void main(String[] args) throws Exception {
@@ -101,6 +103,9 @@ public class ToanBoLab5 {
     }
     public static void Giamdan(ArrayList<String> a)
     {
-        
+        for(int i=0;i<a.size();i++)
+        {
+            Collection.sort(a.get(i),Collections.reverseOrder());
+        }
     }
 }
