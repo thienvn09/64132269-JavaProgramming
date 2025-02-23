@@ -30,7 +30,9 @@ public class ToanBoLab5 {
             Xuat(a,n);
             break;
             case 2:
-            
+            ArrayList<String> b = new ArrayList<String>();
+            NhapChuoi(b);
+            break;
         }
 
            
@@ -56,14 +58,21 @@ public class ToanBoLab5 {
             System.out.printf("a[%d]=%.2f \n",i+1,a.get(i));
         }
     }
-    public static void NhapChuoi(ArrayList<String> a,int n)
+    public static void NhapChuoi(ArrayList<String> a)
     {
+        int i=0;
         Scanner nhap = new Scanner(System.in);
-       
-        for(int i=0;i<n;i++)
+        System.out.print("mời nhập chuỗi (nhập exit để thoát nhập ): ");
+        while(true)
         {
-            System.out.print("Nhap phan tu thu "+(i+1)+": ");
-            a.add(nhap.nextLine());
+            System.out.printf("Nhập Chuỗi thứ %d : \n",i);
+            String input = nhap.nextLine();
+            if(input.equalsIgnoreCase(input))
+            {
+                break;
+            }
+            a.add(input);
+            i++;
         }
     }
     public static void XuatChuoi(ArrayList<String> a,int n)
