@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 public class ToanBoLab5 {
     public static void main(String[] args) throws Exception {
         int so,n;
@@ -29,7 +30,7 @@ public class ToanBoLab5 {
             Xuat(a,n);
             break;
             case 2:
-
+            
         }
 
            
@@ -53,6 +54,31 @@ public class ToanBoLab5 {
         for(int i=0;i<n;i++)
         {
             System.out.printf("a[%d]=%.2f \n",i+1,a.get(i));
+        }
+    }
+    public static void NhapChuoi(ArrayList<String> a,int n)
+    {
+        Scanner nhap = new Scanner(System.in);
+       
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("Nhap phan tu thu "+(i+1)+": ");
+            a.add(nhap.nextLine());
+        }
+    }
+    public static void XuatChuoi(ArrayList<String> a,int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.printf("a[%d]=%s \n",i+1,a.get(i));
+        }
+    }
+    public static void XuatNgauNhien(ArrayList<String> a,int n)
+    {
+        Random  rd = new Random();
+        for(int i=0;i<n;i++)
+        {
+            System.out.printf("a[%d]=%s \n",i+1,a.get(rd.nextInt(n)));
         }
     }
 
