@@ -61,6 +61,7 @@ public class ToanBoLab5 {
 
        nhap.close();
     }
+    // bai 1
     public static void Nhap(ArrayList<Double> a,int n)
     {
         Scanner nhap = new Scanner(System.in);
@@ -79,6 +80,7 @@ public class ToanBoLab5 {
             System.out.printf("a[%d]=%.2f \n",i+1,a.get(i));
         }
     }
+    // bai 2
     public static void NhapChuoi(ArrayList<String> a)
     {
         int i=0;
@@ -145,4 +147,5 @@ public class ToanBoLab5 {
         XuatChuoi(a);
         nhap.close();
     }
+    // bai 3
 }
