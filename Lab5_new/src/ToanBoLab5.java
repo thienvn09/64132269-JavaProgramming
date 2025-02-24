@@ -39,8 +39,8 @@ public class ToanBoLab5 {
             System.out.print("Xuất ngẫu nhiên : \n");
             XuatNgauNhien(b);
             System.out.print("Sắp xếp tăng dần hoặc giảm dần : \n");
-            System.out.print("1. Tăng dần \n");
-            System.out.print("2. Giảm dần \n");
+            System.out.print("0. Tăng dần \n");
+            System.out.print("1. Giảm dần \n");
             System.out.print("Mời bạn chọn chức năng : ");
             check = nhap.nextInt();
             nhap.nextLine();
@@ -53,10 +53,12 @@ public class ToanBoLab5 {
             }while(check !=1 && check !=0); // chỉ nhận 1 hoặc 0
             if(check == 1)
             {
+                System.out.println("Sắp xếp tăng dần  ");
                 Giamdan(b,false);
             }
             else
             {
+                System.out.println("Sắp xếp giảm dần  ");
                 Giamdan(b,true);
             }
             break;
